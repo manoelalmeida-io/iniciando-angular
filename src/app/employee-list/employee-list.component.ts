@@ -15,4 +15,10 @@ export class EmployeeListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getSalaryColor(employee) {
+    return {
+      'salary-expensive': employee.salary > 20000,
+      'salary-cheap': employee.salary <= 20000
+    };
+  }
 }

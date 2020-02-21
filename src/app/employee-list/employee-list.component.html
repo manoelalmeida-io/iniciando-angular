@@ -4,8 +4,8 @@
         <th>Nome</th>
         <th>Salário</th>
     </tr>
-    <tr *ngFor="let employee of employees">
+    <tr *ngFor="let employee of employees; let i = index;" [id]="'tr' + i">
         <td>{{employee.name}}</td>
-        <td>{{employee.salary}}</td>
+        <td [ngClass]="getSalaryColor(employee)">{{employee.salary}}</td>
     </tr>
 </table>
