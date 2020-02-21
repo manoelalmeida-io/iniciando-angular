@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeeNewComponent implements OnInit {
 
   name = 'Manoel';
+  employees = [];
 
   constructor() {
     setTimeout(() => {
@@ -18,4 +19,8 @@ export class EmployeeNewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addEmployee() {
+    this.employees.push(this.name);
+    console.log(this.employees);
+  }
 }
