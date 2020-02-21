@@ -2,4 +2,8 @@
 <input type="text" [(ngModel)]="name"><br>
 <label for="">Salário</label>
 <input type="text" [(ngModel)]="salary"><br>
+<div *ngIf="salary < 1000">
+    <label for="">Bonus</label>
+    <input type="text" [(ngModel)]="bonus"><br>
+</div>
 <button type="button" (click)="addEmployee()">Adicionar empregado</button>
